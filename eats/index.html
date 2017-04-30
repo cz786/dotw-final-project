@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>EATS</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+      }
+      
+
+      #animation {
+        float: right;
+        /*width: 10%;*/
+        width: 10vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-color: transparent;
+      }
+
+      #animation > img {
+        width: 75%;
+      }
+
+
+
+      #images {
+        /*display: block;*/
+        width: 90vw;
+        height: 100vh;
+        /*width: 90%;
+        height: 100%;*/
+        background-color: transparent;
+        perspective: 450px;
+        perspective-origin: 50% 35%;
+      }
+
+
+      div#one {
+        position: absolute;
+        top: 30px;
+        left: 145px;
+        z-index: 500;
+        width: 175px;
+        height: 218px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        /*transform: translateZ(100px);*/
+        /*transform: rotate3d(-1, 1, 0, 45deg);*/
+        transform: rotateY(17deg) translateZ(-50px) translateX(-50px);
+        /*background-color: purple;*/
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#two {
+        position: absolute;
+        top: 50px;
+        left: 700px;
+        z-index: 400;
+        width: 500px;
+        height: 300px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(-10deg) translateZ(-200px);
+        background-color: red;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#three {
+        position: absolute;
+        top: 125px;
+        left: 265px;
+        z-index: 400;
+        width: 300px;
+        height: 222px;
+        opacity: 0.8;
+        transform: rotateY(10deg);
+        transition: opacity 1s, z-index 0.5s;
+        background-color: yellow;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#four {        
+        position: absolute;
+        top: 290px;
+        left: 85px;
+        z-index: 100;
+        width: 210px;
+        height: 210px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(25deg);
+        background-color: blue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#five {
+        position: absolute;
+        top: 440px;
+        left: 225px;
+        z-index: 700;
+        width: 210px;
+        height: 300px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(10deg) translateZ(-50px);
+        background-color: green;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#six {
+        position: absolute;
+        top: 250px;
+        left: 525px;
+        z-index: 600;
+        width: 300px;
+        height: 240px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        /*transform: rotateY(0deg);*/
+        background-color: gray;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#seven {
+        position: absolute;
+        top: 250px;
+        left: 1060px;
+        z-index: 200;
+        width: 230px;
+        height: 300px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(-20deg) translateZ(-300px) translateX(130px);
+        background-color: magenta;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#eight {
+        position: absolute;
+        top: 450px;
+        left: 910px;
+        z-index: 300;
+        width: 240px;
+        height: 240px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(-15deg) translateZ(-150px) translateX(80px);
+        background-color: black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      #images img {
+        width: 100%;
+        height: auto;
+      }
+
+      #images div:hover {
+        opacity: 1;
+        z-index: 1000;
+      }
+
+      #five img, #seven img, #six img {
+        height: 100%;
+        width: auto;
+      }
+
+
+
+
+      /* ANIMATION: Pacman */
+      #animation{
+        float: right;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        width: 10vw;
+        height: 100vh;
+        background-color: black;
+      }
+
+      #pacman-top{
+        background-color:yellow;
+        position: absolute;
+        top: 30px;
+        left: 32px;
+        height:25px;
+        width:50px;
+        border-radius:100px 100px 0 0;
+        transform: rotate(-90deg);
+        animation: rotateTop 0.5s infinite linear;
+      }
+
+      #pacman-bottom{
+        position: absolute;
+        top: 30px;
+        left: 54px;
+        float: right;
+        background-color:yellow;
+        height:25px;
+        width:50px;
+        border-radius:0 0 100px 100px;
+        transform: rotate(-90deg);
+        animation: rotateBottom 0.5s infinite linear;
+      }
+
+      #eat {
+        position: absolute;
+        top: 100px;
+        margin-top: -54px;
+        margin-left: -2px;
+        width: 13px;
+        height: 13px;
+        border-radius: 20%;
+        animation: eat 1s linear 0s infinite;
+      }   
+
+      /* Animation*/
+      @keyframes rotateTop {
+        0%  {transform: rotate(-90deg);}
+        50% {transform: rotate(-35deg);}
+        
+      }
+      @keyframes rotateBottom {
+        0%  {transform: rotate(-90deg);}
+        50% {transform: rotate(-145deg);}  
+      }
+
+      @keyframes eat {
+        0% { 
+          box-shadow: 
+            65px 100px 0 0 #ffcc00, 
+            65px 300px 0 0 #ffcc00, 
+            65px 500px 0 0 #ffcc00, 
+            65px 700px 0 0 #ffcc00,
+            65px 900px 0 0 #ffcc00, 
+            65px 1100px 0 0 #ffcc00, 
+            65px 1300px 0 0 #ffcc00;
+        }
+        
+        100% { 
+          box-shadow: 
+            65px 0px 0 0 #ffcc00, 
+            65px 100px 0 0 #ffcc00,
+            65px 300px 0 0 #ffcc00, 
+            65px 500px 0 0 #ffcc00, 
+            65px 700px 0 0 #ffcc00, 
+            65px 900px 0 0 #ffcc00, 
+            65px 1100px 0 0 #ffcc00;
+        }
+      } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* flipping */
+
+      /*
+      figure {
+        color: white;
+        text-align: center;
+        backface-visibility: hidden;
+      }
+*/
+      .front, .back {
+        transition: transform 1s, z-index 0s 0.25s;
+
+        /*transform-style: preserve-3d;
+        transform-origin: right center;*/
+      }
+
+      #back1 {
+        
+      }
+
+      .back {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 175px;
+        height: 218px;
+
+        z-index: -2;
+        transform: rotateY(180deg);
+        color: white;
+        background-color: pink;
+      }
+
+      .front {
+        z-index: 2000;
+        transition: transform 1s, z-index 0s 0.25s;
+        transform: rotateY(0deg);
+      }
+
+      .flipped {
+        width: 175px;
+        height: 218px;
+      }
+
+      .flipped .front {
+        transform: rotateY(180deg);
+        transition: transform 1s, z-index 0s 0.25s;
+        z-index: -1;
+      }
+
+      .flipped .back {
+        transition: transform 1s, z-index 0s 0.25s;
+        z-index: 2000;
+        transform: rotateY(0deg);
+      }
+
+
+
+    </style>
+  </head>
+
+  <body>
+    <video id="bg-video" autoplay loop>
+      <source src="media/lights.mp4" type="video/mp4">
+    </video>
+
+    <div id="animation">
+      <div id="pacman-top"></div>
+      <div id="pacman-bottom"></div>
+      <div id="eat"></div>
+    </div>
+
+    <div id="images">
+      <div class="image" id="one">
+        <img class="front" src="images/taiyaki.jpg">
+        <div class="back" id="back1">Taiyaki</div>
+      </div>
+      <div class="image" id="two">
+        <img class="front" src="images/food.jpg">
+      </div>
+      <div class="image" id="three">
+        <img class="front" src="images/new-territories.jpg">
+      </div>
+      <div class="image" id="four">
+        <img class="front" src="images/paella.jpg">
+      </div>
+      <div class="image" id="five">
+        <img class="front" src="images/boba.jpg">
+      </div>
+      <div class="image" id="six">
+        <img class="front" src="images/waffle.jpg">
+      </div>
+      <div class="image" id="seven">
+        <img class="front" src="images/soft-swerve.jpg">
+      </div>
+      <div class="image" id="eight">
+        <img class="front" src="images/kbbq.jpg">
+      </div>
+     
+    </div>
+
+    <script>
+
+      var test = document.getElementById('one');
+      test.addEventListener('click', function() {
+        test.classList.toggle('flipped');
+      });
+      /*
+      var images = document.querySelectorAll('.image');
+
+      for (var i = 0; i < images.length; i++) {
+        console.log(images[i]);
+        images[i].addEventListener('click', function(i) {
+          return function() {
+            //images[i].classList.toggle('imageHidden');
+            images[i].classList.toggle('flipped');
+          };
+        }(i));
+      }
+*/
+    </script>
+    
+  </body>
+</html>
