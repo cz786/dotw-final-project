@@ -87,7 +87,7 @@
         top: 125px;
         left: 265px;
         z-index: 400;
-        width: 300px;
+        width: 295px;
         height: 222px;
         opacity: 0.8;
         transform: rotateY(10deg);
@@ -194,6 +194,7 @@
         width: 10vw;
         height: 100vh;
         background-color: black;
+        opacity: 0.6;
       }
 
       #pacman-top{
@@ -206,6 +207,7 @@
         border-radius:100px 100px 0 0;
         transform: rotate(-90deg);
         animation: rotateTop 0.5s infinite linear;
+        opacity: 1;
       }
 
       #pacman-bottom{
@@ -219,6 +221,7 @@
         border-radius:0 0 100px 100px;
         transform: rotate(-90deg);
         animation: rotateBottom 0.5s infinite linear;
+        opacity: 1;
       }
 
       #eat {
@@ -230,6 +233,7 @@
         height: 13px;
         border-radius: 20%;
         animation: eat 1s linear 0s infinite;
+        opacity: 1;
       }   
 
       /* Animation*/
@@ -271,7 +275,9 @@
 
 
 
-
+      .grayscale {
+        filter: grayscale(1);
+      }
 
 
 
@@ -404,6 +410,32 @@
         }(i));
       }
 */
+      var images = document.querySelectorAll('img');
+
+      // set images to gray
+      function grayscale() {
+        for (var i = 0; i < images.length; i++) {
+          images[i].classList.add('grayscale');
+        }
+      }
+
+      // toggle grayscale
+      var color = function(index) {
+        images[index].classList.toggle('grayscale');
+      }
+
+
+      window.addEventListener('load', grayscale());
+
+      // mouseover
+      for (var i = 0; i < images.length; i++) {
+          images[i].addEventListener('mouseover', color.bind(this, i));
+      }
+
+      // mouseout
+      for (var i = 0; i < images.length; i++) {
+          images[i].addEventListener('mouseout', color.bind(this, i));
+      }
     </script>
     
   </body>

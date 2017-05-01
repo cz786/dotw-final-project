@@ -281,6 +281,13 @@
 
 
 
+
+
+
+      .grayscale {
+        filter: grayscale(1);
+      }
+
     </style>
   </head>
 
@@ -331,8 +338,33 @@
     <div id="boxFour" class="heart pattern1">♥</div>
 
     <script>
+      var images = document.querySelectorAll('img');
 
-      
+      // set images to gray
+      function grayscale() {
+        for (var i = 0; i < images.length; i++) {
+          images[i].classList.add('grayscale');
+        }
+      }
+
+      // toggle grayscale
+      var color = function(index) {
+        images[index].classList.toggle('grayscale');
+      }
+
+
+      window.addEventListener('load', grayscale());
+
+      // mouseover
+      for (var i = 0; i < images.length; i++) {
+          images[i].addEventListener('mouseover', color.bind(this, i));
+      }
+
+      // mouseout
+      for (var i = 0; i < images.length; i++) {
+          images[i].addEventListener('mouseout', color.bind(this, i));
+      }
+    
     </script>
     
   </body>
