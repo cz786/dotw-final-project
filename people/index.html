@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PEOPLE</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+
+        font-family: 'Helvetica Neue', sans-serif;
+        font-size: 13px;
+      }
+
+      #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+      }
+
+      #images {
+        /*display: block;*/
+        width: 100vw;
+        height: 100vh;
+        /*width: 90%;
+        height: 100%;*/
+        background-color: transparent;
+        perspective: 450px;
+        perspective-origin: 50% 50%;
+      }
+
+
+      div#one {
+        position: absolute;
+        top: 565px;
+        left: 405px;
+        z-index: 500;
+        width: 120px;
+        height: 153px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(7deg) rotateY(-7deg) translateZ(-20px) translateX(-58px);
+        /*transform: translateZ(100px);*/
+
+        /*transform: rotateY(15deg);*/
+        background-color: purple;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#two {
+        position: absolute;
+        top: 35px;
+        left: 100px;
+        z-index: 400;
+        width: 515px;
+        height: 385px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(8deg) rotateY(-7deg) translateZ(-30px);
+        /*transform: rotateY(15deg);*/
+        background-color: red;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#three {
+        position: absolute;
+        top: 455px;
+        left: 490px;
+        z-index: 800;
+        width: 180px;
+        height: 232px;
+        opacity: 0.8;
+        /*transform: rotateY(15deg);*/
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(-8deg) translateZ(-60px) translateX(-85px);
+        background-color: yellow;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#four {        
+        position: absolute;
+        top: 390px;
+        left: 10px;
+        z-index: 100;
+        width: 330px;
+        height: 130px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(-11deg);
+        /*transform: rotateY(15deg);*/
+        background-color: blue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#five {
+        position: absolute;
+        top: 30px;
+        left: 910px;
+        z-index: 500;
+        width: 250px;
+        height: 150px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(10deg) rotateY(8deg) translateZ(10px);
+        /*transform: rotateY(15deg);*/
+        background-color: green;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#six {
+        position: absolute;
+        top: 290px;
+        left: 540px;
+        z-index: 600;
+        width: 340px;
+        height: 190px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(10deg) rotateY(3deg);
+        /*transform: rotateY(15deg);*/
+        background-color: gray;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#seven {
+        position: absolute;
+        top: 460px;
+        left: 830px;
+        z-index: 200;
+        width: 170px;
+        height: 210px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(8deg) translateZ(-20px);
+        /*transform: rotateY(15deg);*/
+        background-color: magenta;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#eight {
+        position: absolute;
+        top: 100px;
+        left: 780px;
+        z-index: 700;
+        width: 220px;
+        height: 220px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(10deg) rotateY(6deg) translateZ(-10px);
+        /*transform: rotateY(15deg);*/
+        background-color: black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#nine {        
+        position: absolute;
+        top: 260px;
+        left: 955px;
+        z-index: 100;
+        width: 210px;
+        height: 157px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(7deg) rotateY(10deg) translateZ(12px);
+        /*transform: rotateY(15deg);*/
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#ten {        
+        position: absolute;
+        top: 380px;
+        left: 1060px;
+        z-index: 300;
+        width: 345px;
+        height: 193px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(11deg) translateZ(12px);
+        /*transform: rotateY(15deg);*/
+        background-color: orange;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      #images img {
+        width: 100%;
+        height: auto;
+      }
+
+      #images div:hover {
+        opacity: 1;
+        z-index: 1000;
+      }
+
+
+
+      /* ANIMATION: HEARTS*/
+      #boxOne {
+        position: absolute;
+        top: 20px;
+        left: 10px;
+        width: 200px;
+        height: 200px;
+        /*background-color: pink;*/
+      }
+
+      #boxTwo {
+        position: absolute;
+        top: 20px;
+        left: 1230px;
+        width: 200px;
+        height: 200px;
+        /*background-color: black;*/
+      }
+
+      #boxThree {
+        position: absolute;
+        top: 600px;
+        left: 10px;
+        width: 200px;
+        height: 200px;
+        /*background-color: pink;*/
+      }
+
+      #boxFour {
+        position: absolute;
+        top: 600px;
+        left: 1230px;
+        width: 200px;
+        height: 200px;
+        /*background-color: black;*/
+      }
+
+      .heart {
+        font-size: 90px;
+        text-align: center;
+        color: rgba(165, 25, 25, 1);
+        padding: 0;
+        margin: 0;
+      }
+
+      .pattern1 {
+        animation: flash 1s linear infinite;
+      }
+
+      @keyframes flash {
+       0% {
+          color: rgba(165, 25, 25, 1);
+       }
+       90% {
+          color: rgba(255,0,0,0.0);
+       }
+       100% {
+          color: rgba(255,0,0,1.0);
+       }
+
+      }
+
+      .pattern2 {
+        animation: pulse 1s linear infinite;
+      }
+
+      @keyframes pulse {
+       0% {
+          transform: scale(1.1);
+       }
+       50% {
+          transform: scale(0.8);
+       }
+       100% {
+          transform: scale(1);
+       }
+
+      }
+
+
+
+    </style>
+  </head>
+
+  <body>
+
+    <video id="bg-video" autoplay loop>
+      <source src="media/motion.mp4" type="video/mp4">
+    </video>
+    
+
+    <div id="images">
+      <div class="image" id="one">
+        <img class="front" src="images/bro.jpg">
+      </div>
+      <div class="image" id="two">
+        <img class="front" src="images/friends.jpg">
+      </div>
+      <div class="image" id="three">
+        <img class="front" src="images/dorm.jpg">
+      </div>
+      <div class="image" id="four">
+        <img class="front" src="images/roomie.jpg">
+      </div>
+      <div class="image" id="five">
+        <img class="front" src="images/florida.jpg">
+      </div>
+      <div class="image" id="six">
+        <img class="front" src="images/dessert-goals.jpg">
+      </div>
+      <div class="image" id="seven">
+        <img class="front" src="images/grandparents.jpg">
+      </div>
+      <div class="image" id="eight">
+        <img class="front" src="images/parents.jpg">
+      </div> 
+      <div class="image" id="nine">
+        <img class="front" src="images/aunt-uncle.jpg">
+      </div>
+      <div class="image" id="ten">
+        <img class="front" src="images/bridge.jpg">
+      </div> 
+    </div>
+
+    <div id="boxOne" class="heart pattern1">♥</div>
+    <div id="boxTwo" class="heart pattern2">♥</div>
+
+    <div id="boxThree" class="heart pattern2">♥</div>
+    <div id="boxFour" class="heart pattern1">♥</div>
+
+    <script>
+
+      
+    </script>
+    
+  </body>
+</html>

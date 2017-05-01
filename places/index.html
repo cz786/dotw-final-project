@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PLACES</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      #bg-video {
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: -100;
+      }
+
+      
+
+      #animation {
+        /*float: right;*/
+
+        width: 100vw;
+        height: 10vh;
+        /*
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;*/
+        background-color: transparent;
+      }
+
+      #animation > img {
+        height: 100%;
+        width: auto;
+      }
+
+
+
+      #images {
+        /*display: block;*/
+        width: 100vw;
+        height: 90vh;
+        /*width: 90%;
+        height: 100%;*/
+        background-color: transparent;
+        perspective: 600px;
+        perspective-origin: 50% 50%;
+      }
+
+
+      div#one {
+        position: absolute;
+        top: 200px;
+        left: 45px;
+        z-index: 500;
+        width: 210px;
+        height: 263px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-12deg);
+
+        /*transform: rotateY(15deg);*/
+        background-color: purple;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#two {
+        position: absolute;
+        top: 120px;
+        left: 350px;
+        z-index: 400;
+        width: 545px;
+        height: 355px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-3deg);
+        /*transform: rotateY(15deg);*/
+        background-color: red;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#three {
+        position: absolute;
+        top: 40px;
+        left: 180px;
+        z-index: 300;
+        width: 200px;
+        height: 252px;
+        opacity: 0.8;
+        /*transform: rotateY(15deg);*/
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-11deg);
+        background-color: yellow;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#four {        
+        position: absolute;
+        top: 430px;
+        left: 270px;
+        z-index: 100;
+        width: 277px;
+        height: 210px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-10deg);
+        /*transform: rotateY(15deg);*/
+        background-color: blue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#five {
+        position: absolute;
+        top: 110px;
+        left: 1190px;
+        z-index: 500;
+        width: 230px;
+        height: 339px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(17deg);
+        /*transform: rotateY(15deg);*/
+        background-color: green;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#six {
+        position: absolute;
+        top: 320px;
+        left: 985px;
+        z-index: 600;
+        width: 300px;
+        height: 225px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(10deg);
+        /*transform: rotateY(15deg);*/
+        background-color: gray;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#seven {
+        position: absolute;
+        top: 390px;
+        left: 840px;
+        z-index: 200;
+        width: 188px;
+        height: 250px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(3deg);
+        /*transform: rotateY(15deg);*/
+        background-color: magenta;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#eight {
+        position: absolute;
+        top: 40px;
+        left: 1095px;
+        z-index: 700;
+        width: 195px;
+        height: 230px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(15deg);
+        /*transform: rotateY(15deg);*/
+        background-color: black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      #images img {
+        width: 100%;
+        height: auto;
+      }
+
+      #images div:hover {
+        opacity: 1;
+        z-index: 1000;
+      }
+
+      #four img {
+        height: 100%;
+        width: auto;
+      }
+
+
+/*
+      #five img, #seven img, #six img {
+        height: 100%;
+        width: auto;
+      }
+*/
+
+
+    </style>
+
+    <link rel="stylesheet" href="css/test.css">
+  </head>
+
+  <body>
+    <video id="bg-video" autoplay loop>
+      <source src="media/stars-1.mp4" type="video/mp4">
+    </video>
+    
+
+    <div id="images">
+      <div class="image" id="one">
+        <img class="front" src="images/balcony.jpg">
+      </div>
+      <div class="image" id="two">
+        <img class="front" src="images/brooklyn.jpg">
+      </div>
+      <div class="image" id="three">
+        <img class="front" src="images/union.jpg">
+      </div>
+      <div class="image" id="four">
+        <img class="front" src="images/manhattan.jpg">
+      </div>
+      <div class="image" id="five">
+        <img class="front" src="images/florida.jpg">
+      </div>
+      <div class="image" id="six">
+        <img class="front" src="images/niagara-falls.jpg">
+      </div>
+      <div class="image" id="seven">
+        <img class="front" src="images/west4tattoo.jpg">
+      </div>
+      <div class="image" id="eight">
+        <img class="front" src="images/zoo.jpg">
+      </div> 
+    </div>
+
+    <div id="animation">
+      <div id="container">
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#1" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#2" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#3" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#4" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#5" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#6" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#7" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#A" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#C" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#E" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#B" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#D" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#F" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#M" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#G" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#J" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#Z" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#L" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#N" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#Q" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#R" /></svg>
+        </div>
+
+        <div class="icon">
+          <svg class="icons"><use xlink:href="icons.svg#S" /></svg>
+        </div>
+
+      </div>
+    </div>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,255 @@
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      
+
+      #animation {
+        /*float: right;*/
+
+        width: 100vw;
+        height: 10vh;
+        /*
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;*/
+        background-color: black;
+
+
+
+        margin: auto;
+      }
+
+      #animation > img {
+        height: 100%;
+        width: auto;
+      }
+
+
+
+      #images {
+        /*display: block;*/
+        width: 100vw;
+        height: 90vh;
+        /*width: 90%;
+        height: 100%;*/
+        background-color: white;
+        perspective: 600px;
+        perspective-origin: 50% 50%;
+      }
+
+
+      div#one {
+        position: absolute;
+        top: 200px;
+        left: 45px;
+        z-index: 500;
+        width: 210px;
+        height: 263px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-12deg);
+
+        /*transform: rotateY(15deg);*/
+        background-color: purple;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#two {
+        position: absolute;
+        top: 120px;
+        left: 350px;
+        z-index: 400;
+        width: 545px;
+        height: 355px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-3deg);
+        /*transform: rotateY(15deg);*/
+        background-color: red;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#three {
+        position: absolute;
+        top: 40px;
+        left: 180px;
+        z-index: 300;
+        width: 200px;
+        height: 252px;
+        opacity: 0.8;
+        /*transform: rotateY(15deg);*/
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-11deg);
+        background-color: yellow;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#four {        
+        position: absolute;
+        top: 430px;
+        left: 270px;
+        z-index: 100;
+        width: 277px;
+        height: 210px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-10deg);
+        /*transform: rotateY(15deg);*/
+        background-color: blue;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#five {
+        position: absolute;
+        top: 110px;
+        left: 1190px;
+        z-index: 500;
+        width: 230px;
+        height: 339px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(17deg);
+        /*transform: rotateY(15deg);*/
+        background-color: green;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#six {
+        position: absolute;
+        top: 320px;
+        left: 985px;
+        z-index: 600;
+        width: 300px;
+        height: 226px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(10deg);
+        /*transform: rotateY(15deg);*/
+        background-color: gray;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#seven {
+        position: absolute;
+        top: 390px;
+        left: 840px;
+        z-index: 200;
+        width: 188px;
+        height: 250px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(3deg);
+        /*transform: rotateY(15deg);*/
+        background-color: magenta;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      div#eight {
+        position: absolute;
+        top: 40px;
+        left: 1095px;
+        z-index: 700;
+        width: 195px;
+        height: 230px;
+        opacity: 0.8;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(15deg);
+        /*transform: rotateY(15deg);*/
+        background-color: black;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+
+      #images img {
+        width: 100%;
+        height: auto;
+      }
+
+      #images div:hover {
+        opacity: 1;
+        z-index: 1000;
+      }
+
+      #four img {
+        height: 100%;
+        width: auto;
+      }
+
+
+/*
+      #five img, #seven img, #six img {
+        height: 100%;
+        width: auto;
+      }
+*/
+
+
+
+
+    /* ANIMATION */
+    /*
+    #mta {
+      width: 100%;
+      height: 10vh;
+    }
+*/
+    
+    @keyframes appear {
+      0% {fill-opacity: 0;}
+      30% {fill-opacity: 0.3;}
+      60% {fill-opacity: 0.7;}
+      100% {fill-opacity: 1;}
+    }
+
+    svg.icons {
+      width: 90%;
+      height: 90%;
+
+      fill-opacity: 0;
+      animation-name: appear;
+      animation-duration: 2200ms;
+      animation-iteration-count: infinite;
+    }
+
+    svg#2 {animation-delay: 100ms;}
+    svg#3 {animation-delay: 200ms;}
+    svg#4 {animation-delay: 300ms;}
+    svg#5 {animation-delay: 400ms;}
+    svg#6 {animation-delay: 500ms;}
+    svg#7 {animation-delay: 600ms;}
+    svg#A {animation-delay: 700ms;}
+    svg#C {animation-delay: 800ms;}
+    svg#E {animation-delay: 900ms;}
+    svg#B {animation-delay: 1000ms;}
+    svg#D {animation-delay: 1100ms;}
+    svg#F {animation-delay: 1200ms;}
+    svg#M {animation-delay: 1300ms;}
+    svg#G {animation-delay: 1400ms;}
+    svg#J {animation-delay: 1500ms;}
+    svg#Z {animation-delay: 1600ms;}
+    svg#L {animation-delay: 1700ms;}
+    svg#N {animation-delay: 1800ms;}
+    svg#Q {animation-delay: 1900ms;}
+    svg#R {animation-delay: 2000ms;}
+    svg#S {animation-delay: 2100ms;}
+
+    svg.icons:hover {
+      fill: black;
+    }
+
+    #container {
+      width: 100%;
+      display: flex;
+      margin: 0;
+    }
+
+    .icon {
+        width: 9.75vh;
+        height: 9.75vh;
+        padding-top: 5px;
+    }
+
+
+

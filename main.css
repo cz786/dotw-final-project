@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+}
+
+h2 {
+  position: absolute;
+  top: 50px;
+  left: 475px;
+  z-index: 100;
+  text-align: center;
+}
+
+.polaroids {
+  /*margin: 0 auto;*/
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 80;
+  padding: 20px;
+  text-align: center;
+  perspective: 450px;
+  perspective-origin: 50% 35%;
+  background-color: transparent;
+}
+
+.polaroid {
+  /*display: inline-block;*/
+  margin: 50px;
+  position: absolute;
+  /*width: auto;*/
+}
+
+div#eats {
+  /*position: absolute;*/
+  top: 200px;
+  left: 140px;
+  
+  transform: rotateX(7deg) rotateY(-7deg) translateZ(-20px);
+}
+
+div#places {
+  /*position: absolute;*/
+  top: 200px;
+  left: 440px;
+  
+  transform: rotateX(7deg) rotateY(0deg) translateZ(10px) translateX(130px);
+}
+
+div#people {
+  /*position: absolute;*/
+  top: 200px;
+  left: 740px;
+  
+  transform: rotateX(7deg) rotateY(7deg) translateZ(9px) translateX(240px);
+}
+
+.polaroid img {
+  border: 12px solid #fff;
+  border-bottom: 70px solid #fff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  width: 200px;
+  height: 200px;
+  /*height: auto;
+  max-width: 100%;*/
+}
+
+.polaroid p {
+  color: #888;
+  font: 500 18px/22px Arial, sans-serif;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
