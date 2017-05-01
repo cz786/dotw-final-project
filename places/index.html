@@ -198,6 +198,10 @@
         filter: grayscale(1);
       }
 
+      .hideCaption {
+        display: none;
+      }
+
       /* CAPTION */
       p {
         margin-top: 63px;
@@ -209,13 +213,97 @@
 
       #back1 {
         position: absolute;
-        top: 0px;
+        top: -2px;
         left: 0px;
         z-index: 600;
         width: 210px;
-        height: 263px;
+        height: 284px;
         transition: opacity 1s, z-index 0.5s;
-        transform: rotateX(-10deg) rotateY(-12deg);
+        transform: rotateX(-10deg) rotateY(-2deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back2 {
+        position: absolute;
+        top: -3px;
+        left: 0px;
+        z-index: 500;
+        width: 545px;
+        height: 362px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(0deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back3 {
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        z-index: 400;
+        width: 201px;
+        height: 272px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-3deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back4 {        
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        z-index: 200;
+        width: 280px;
+        height: 213px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-2deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back5 {
+        position: absolute;
+        top: -4px;
+        left: 0px;
+        z-index: 600;
+        width: 230px;
+        height: 356px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(1deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back6 {
+        position: absolute;
+        top: 0px;
+        left: -1px;
+        z-index: 700;
+        width: 302px;
+        height: 225px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(5deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back7 {
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        z-index: 200;
+        width: 189px;
+        height: 255px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(0deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+      #back8 {
+        position: absolute;
+        top: -2px;
+        left: -1px;
+        z-index: 700;
+        width: 196px;
+        height: 248px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(2deg);
         background-color: rgba(153, 187, 255, 0.6);
       }
 
@@ -244,7 +332,7 @@
       </div>
       <div class="image" id="three">
         <img class="front" src="images/union.jpg">
-        <div class="back" id="back3"><p>Union Square</p></div>
+        <div class="back" id="back3"><p>Union<br>Square</p></div>
       </div>
       <div class="image" id="four">
         <img class="front" src="images/manhattan.jpg">
@@ -376,6 +464,15 @@
         for (var i = 0; i < images.length; i++) {
           images[i].classList.add('grayscale');
         }
+
+        document.getElementById('back1').classList.add('hideCaption');
+        document.getElementById('back2').classList.add('hideCaption');
+        document.getElementById('back3').classList.add('hideCaption');
+        document.getElementById('back4').classList.add('hideCaption');
+        document.getElementById('back5').classList.add('hideCaption');
+        document.getElementById('back6').classList.add('hideCaption');
+        document.getElementById('back7').classList.add('hideCaption');
+        document.getElementById('back8').classList.add('hideCaption');
       }
 
       // toggle grayscale
