@@ -193,10 +193,33 @@
 
 
 
-
+      /* TOGGLE CLASSES */
       .grayscale {
         filter: grayscale(1);
       }
+
+      /* CAPTION */
+      p {
+        margin-top: 63px;
+        font-family: Helvetica, sans-serif;
+        font-size: 2em;
+        color: white;
+        text-align: center;
+      }
+
+      #back1 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 600;
+        width: 210px;
+        height: 263px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(-10deg) rotateY(-12deg);
+        background-color: rgba(153, 187, 255, 0.6);
+      }
+
+
 
 
     </style>
@@ -213,27 +236,35 @@
     <div id="images">
       <div class="image" id="one">
         <img class="front" src="images/balcony.jpg">
+        <div class="back" id="back1"><p>Bestie's Balcony Garden</p></div>
       </div>
       <div class="image" id="two">
         <img class="front" src="images/brooklyn.jpg">
+        <div class="back" id="back2"><p>Home: Brooklyn</p></div>
       </div>
       <div class="image" id="three">
         <img class="front" src="images/union.jpg">
+        <div class="back" id="back3"><p>Union Square</p></div>
       </div>
       <div class="image" id="four">
         <img class="front" src="images/manhattan.jpg">
+        <div class="back" id="back4"><p>Top of the Rock</p></div>
       </div>
       <div class="image" id="five">
         <img class="front" src="images/florida.jpg">
+        <div class="back" id="back5"><p>Siesta Key, Florida</p></div>
       </div>
       <div class="image" id="six">
         <img class="front" src="images/niagara-falls.jpg">
+        <div class="back" id="back6"><p>Niagara Falls</p></div>
       </div>
       <div class="image" id="seven">
         <img class="front" src="images/west4tattoo.jpg">
+        <div class="back" id="back7"><p>West 4 Tattoo</p></div>
       </div>
       <div class="image" id="eight">
         <img class="front" src="images/zoo.jpg">
+        <div class="back" id="back8"><p>Columbus Zoo</p></div>
       </div> 
     </div>
 
@@ -336,11 +367,12 @@
       Your browser does not support the audio element.
     </audio>
 
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script>
       var images = document.querySelectorAll('img');
 
-      // set images to gray
-      function grayscale() {
+      // set images to gray and hide captions
+      function initialize() {
         for (var i = 0; i < images.length; i++) {
           images[i].classList.add('grayscale');
         }
@@ -352,7 +384,24 @@
       }
 
 
-      window.addEventListener('load', grayscale());
+      window.addEventListener('load', initialize);
+
+      // caption
+      $('img').each(function(index, value) {
+        // when image is clicked
+        $(this).on('click', function() {
+          // get variable name of target element
+          var i = index + 1;
+          var name = '#back' + i;
+          $(name).slideDown('slow');  //display
+
+          // hide
+          $(name).on('click', function() {
+              $(this).slideUp('slow');
+          });
+        });
+      }); 
+
 
       // mouseover
       for (var i = 0; i < images.length; i++) {

@@ -273,77 +273,124 @@
 
 
 
-
+      /* TOGGLE CLASSES */
       .grayscale {
         filter: grayscale(1);
       }
 
+      .hideCaption {
+        display: none;
+      }
 
 
 
-
-
-
-
-
-
-
-
-      /* flipping */
-
-      /*
-      figure {
+      /* CAPTION */
+      p {
+        margin-top: 63px;
+        font-family: Helvetica, sans-serif;
+        font-size: 2em;
         color: white;
         text-align: center;
-        backface-visibility: hidden;
-      }
-*/
-      .front, .back {
-        transition: transform 1s, z-index 0s 0.25s;
-
-        /*transform-style: preserve-3d;
-        transform-origin: right center;*/
       }
 
       #back1 {
-        
-      }
-
-      .back {
         position: absolute;
         top: 0px;
         left: 0px;
-        width: 175px;
-        height: 218px;
-
-        z-index: -2;
-        transform: rotateY(180deg);
-        color: white;
-        background-color: pink;
+        z-index: 600;
+        width: 185px;
+        height: 220px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(17deg) translateZ(80px) translateX(-30px);
+        background-color: rgba(255, 163, 102, 0.6);
+        
       }
 
-      .front {
-        z-index: 2000;
-        transition: transform 1s, z-index 0s 0.25s;
-        transform: rotateY(0deg);
+      #back2 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 500;
+        width: 510px;
+        height: 316px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(-10deg) translateZ(30px);
+        background-color: rgba(255, 163, 102, 0.6);
       }
 
-      .flipped {
-        width: 175px;
-        height: 218px;
+      #back3 {
+        position: absolute;
+        top: 0px;
+        left: -11px;
+        z-index: 400;
+        width: 300px;
+        height: 232px;
+        transform: rotateY(10deg) translateZ(50px);
+        transition: opacity 1s, z-index 0.5s;
+        background-color: rgba(255, 163, 102, 0.6);
       }
 
-      .flipped .front {
-        transform: rotateY(180deg);
-        transition: transform 1s, z-index 0s 0.25s;
-        z-index: -1;
+      #back4 {        
+        position: absolute;
+        top: 0px;
+        left: -12px;
+        z-index: 100;
+        width: 233px;
+        height: 210px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(25deg);
+        background-color: rgba(255, 163, 102, 0.6);
       }
 
-      .flipped .back {
-        transition: transform 1s, z-index 0s 0.25s;
-        z-index: 2000;
-        transform: rotateY(0deg);
+      #back5 {
+        position: absolute;
+        top: 0px;
+        left: 6px;
+        z-index: 700;
+        width: 245px;
+        height: 300px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(10deg) translateZ(-50px);
+        background-color: rgba(255, 163, 102, 0.6);
       }
+
+      #back6 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 600;
+        width: 361px;
+        height: 240px;
+        transition: opacity 1s, z-index 0.5s;
+        background-color: rgba(255, 163, 102, 0.6);
+      }
+
+      #back7 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 200;
+        width: 270px;
+        height: 300px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(-20deg) translateZ(20px);
+        background-color: rgba(255, 163, 102, 0.6);
+      }
+
+      #back8 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 300;
+        width: 250px;
+        height: 240px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateY(-15deg) translateZ(20px);
+        background-color: rgba(255, 163, 102, 0.6);
+      }
+
+
+      
 
 
 
@@ -364,28 +411,35 @@
     <div id="images">
       <div class="image" id="one">
         <img class="front" src="images/taiyaki.jpg">
-        <div class="back" id="back1">Taiyaki</div>
+        <div class="back" id="back1"><p>Taiyaki</p></div>
       </div>
       <div class="image" id="two">
         <img class="front" src="images/food.jpg">
+        <div class="back" id="back2"><p>Fancy Japanese Food</p></div>
       </div>
       <div class="image" id="three">
         <img class="front" src="images/new-territories.jpg">
+        <div class="back" id="back3"><p>New Territories</p></div>
       </div>
       <div class="image" id="four">
         <img class="front" src="images/paella.jpg">
+        <div class="back" id="back4"><p>Paella</p></div>
       </div>
       <div class="image" id="five">
         <img class="front" src="images/boba.jpg">
+        <div class="back" id="back5"><p>Boba Guys</p></div>
       </div>
       <div class="image" id="six">
         <img class="front" src="images/waffle.jpg">
+        <div class="back" id="back6"><p>Petite Abeille</p></div>
       </div>
       <div class="image" id="seven">
         <img class="front" src="images/soft-swerve.jpg">
+        <div class="back" id="back7"><p>Soft Swerve</p></div>
       </div>
       <div class="image" id="eight">
         <img class="front" src="images/kbbq.jpg">
+        <div class="back" id="back8"><p>KBBQ</p></div>
       </div>
      
     </div>
@@ -395,33 +449,31 @@
       Your browser does not support the audio element.
     </audio>
 
+
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script>
 
-      var test = document.getElementById('one');
-      test.addEventListener('click', function() {
-        test.classList.toggle('flipped');
-      });
-      /*
-      var images = document.querySelectorAll('.image');
-
-      for (var i = 0; i < images.length; i++) {
-        console.log(images[i]);
-        images[i].addEventListener('click', function(i) {
-          return function() {
-            //images[i].classList.toggle('imageHidden');
-            images[i].classList.toggle('flipped');
-          };
-        }(i));
-      }
-*/
       var images = document.querySelectorAll('img');
 
-      // set images to gray
-      function grayscale() {
+      // set images to gray and hide captions
+      function initialize() {
         for (var i = 0; i < images.length; i++) {
           images[i].classList.add('grayscale');
         }
+
+        document.getElementById('back1').classList.add('hideCaption');
+        document.getElementById('back2').classList.add('hideCaption');
+        document.getElementById('back3').classList.add('hideCaption');
+        document.getElementById('back4').classList.add('hideCaption');
+        document.getElementById('back5').classList.add('hideCaption');
+        document.getElementById('back6').classList.add('hideCaption');
+        document.getElementById('back7').classList.add('hideCaption');
+        document.getElementById('back8').classList.add('hideCaption');
+        /*back1.addEventListener('click', function() {
+            back1.classList.toggle('hideCaption');
+          });*/
       }
+      
 
       // toggle grayscale
       var color = function(index) {
@@ -429,7 +481,25 @@
       }
 
 
-      window.addEventListener('load', grayscale());
+      window.addEventListener('load', initialize);
+
+
+      // caption
+      $('img').each(function(index, value) {
+        // when image is clicked
+        $(this).on('click', function() {
+          // get variable name of target element
+          var i = index + 1;
+          var name = '#back' + i;
+          $(name).slideDown('slow');  //display
+
+          // hide
+          $(name).on('click', function() {
+              $(this).slideUp('slow');
+          });
+        });
+      }); 
+
 
       // mouseover
       for (var i = 0; i < images.length; i++) {
