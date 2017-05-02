@@ -26,6 +26,96 @@ body {
   border-bottom: 1px solid #391414;
 }
 
+#birdwrapper {
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  position: fixed;
+  width: 100%;
+  height: 150px;
+}
+
+/* bird */
+#bird {
+  position: absolute;
+  left: 950px;
+  top: -308px;
+}
+
+#head {
+  position: absolute;
+  left: 24px;
+  bottom: 94px;
+  width: 19px;
+  height: 21px;
+  border-radius: 50%;
+  background: black;
+}
+
+#beak {
+  position: absolute;
+  left: 35px;
+  bottom: 108px;
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-right: 10px solid black;
+  border-bottom: 7px solid transparent;
+  transform: rotate(127deg);
+}
+
+#body {
+  position: absolute;
+  bottom: 50px;
+  left: 20px;
+  width: 27px;
+  height: 60px;
+  border-radius: 50% 50% 50% 50% / 38% 38% 62% 62%;
+  transform: rotate(4deg);
+  background: black;
+}
+
+#body:before,
+#body:after {
+  content: "";
+  position: absolute;
+  border-bottom: 42px solid black;
+  border-left: 3px solid transparent;
+  border-right: 5px solid transparent;
+  bottom: -32px;
+  left: 0px;
+  transform: rotate(-155deg);
+}
+
+#body:after {
+  left: auto;
+  right: 8px;
+  transform: rotate(170deg);
+}
+
+#wingLeft, #wingRight {
+  position: absolute;
+  bottom: 37px;
+  width: 3px;
+  height: 30px;  
+  border-radius: 50% 50% 50% 50% / 15% 15% 85% 85%;
+  background: black;
+}
+
+#wingLeft {
+  left: 22px;
+  transform: rotate(-3deg);
+}
+#wingRight {
+  left: 30px;
+  transform: rotate(12deg);
+}
+/* end bird */
+
+
+/* navigation */
 .polaroids {
   position: absolute;
   width: 100vw;
