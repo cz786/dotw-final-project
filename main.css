@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Waiting+for+the+Sunrise');
+
 body {
   margin: 0;
   padding: 0;
@@ -20,9 +22,10 @@ h2 {
   left: 475px;
   z-index: 100;
   text-align: center;
+  font: 500 60px/22px 'Homemade Apple', cursive, Arial, sans-serif;
 }
 
-.navigation {
+.polaroids {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -37,6 +40,10 @@ h2 {
 .polaroid {
   position: absolute;
   margin: 50px;
+}
+
+.polaroid:hover {
+  background-color: rosybrown;
 }
 
 div#eats {
@@ -67,7 +74,7 @@ div#people {
 
 .polaroid p {
   color: #888;
-  font: 500 18px/22px Arial, sans-serif;
+  font: 500 25px/22px 'Waiting for the Sunrise', cursive, Arial, sans-serif;
   position: absolute;
   bottom: 0;
   text-align: center;
