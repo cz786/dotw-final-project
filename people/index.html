@@ -281,12 +281,145 @@
 
 
 
-
-
-
+      /* TOGGLE CLASSES */
       .grayscale {
         filter: grayscale(1);
       }
+
+      .hideCaption {
+        display: none;
+      }
+
+
+      /* CAPTION */
+      p {
+        margin-top: 63px;
+        font-family: Helvetica, sans-serif;
+        font-size: 2em;
+        color: white;
+        text-align: center;
+      }
+
+      #back1 {
+        position: absolute;
+        top: -1px;
+        left: 0px;
+        z-index: 500;
+        width: 121px;
+        height: 163px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(7deg) rotateY(0deg);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back2 {
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        z-index: 400;
+        width: 515px;
+        height: 390px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(8deg) rotateY(0deg);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back3 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 800;
+        width: 180px;
+        height: 242px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(0deg);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back4 {        
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        width: 330px;
+        height: 188px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(0deg);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back5 {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 500;
+        width: 250px;
+        height: 155px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(10deg) rotateY(0deg) translateZ(10px);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back6 {
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        z-index: 600;
+        width: 340px;
+        height: 195px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(10deg) rotateY(0deg);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back7 {
+        position: absolute;
+        top: -5px;
+        left: 0px;
+        z-index: 200;
+        width: 170px;
+        height: 213px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(0deg) translateZ(-60px);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back8 {
+        position: absolute;
+        top: -7px;
+        left: 0px;
+        z-index: 700;
+        width: 220px;
+        height: 224px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(10deg) rotateY(0deg) translateZ(-30px);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back9 {        
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 100;
+        width: 210px;
+        height: 160px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(7deg) rotateY(0deg) translateZ(12px);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
+      #back10 {        
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 300;
+        width: 345px;
+        height: 196px;
+        transition: opacity 1s, z-index 0.5s;
+        transform: rotateX(5deg) rotateY(0deg) translateZ(12px);
+        background-color: rgba(255, 128, 128, 0.6);
+      }
+
 
     </style>
   </head>
@@ -301,33 +434,43 @@
     <div id="images">
       <div class="image" id="one">
         <img class="front" src="images/bro.jpg">
+        <div class="back" id="back1"><p>Bro</p></div>
       </div>
       <div class="image" id="two">
         <img class="front" src="images/friends.jpg">
+        <div class="back" id="back2"><p>NYU Friends</p></div>
       </div>
       <div class="image" id="three">
         <img class="front" src="images/dorm.jpg">
+        <div class="back" id="back3"><p>Comp Sci Friends</p></div>
       </div>
       <div class="image" id="four">
         <img class="front" src="images/roomie.jpg">
+        <div class="back" id="back4"><p>Roomie</p></div>
       </div>
       <div class="image" id="five">
         <img class="front" src="images/florida.jpg">
+        <div class="back" id="back5"><p>Friends Back Home</p></div>
       </div>
       <div class="image" id="six">
         <img class="front" src="images/dessert-goals.jpg">
+        <div class="back" id="back6"><p>More Friends</p></div>
       </div>
       <div class="image" id="seven">
         <img class="front" src="images/grandparents.jpg">
+        <div class="back" id="back7"><p>Grandparents, Dad</p></div>
       </div>
       <div class="image" id="eight">
         <img class="front" src="images/parents.jpg">
+        <div class="back" id="back8"><p>The Parents</p></div>
       </div> 
       <div class="image" id="nine">
         <img class="front" src="images/aunt-uncle.jpg">
+        <div class="back" id="back9"><p>Aunt + Uncle</p></div>
       </div>
       <div class="image" id="ten">
         <img class="front" src="images/bridge.jpg">
+        <div class="back" id="back10"><p>Natalie, Janice</p></div>
       </div> 
     </div>
 
@@ -346,11 +489,22 @@
     <script>
       var images = document.querySelectorAll('img');
 
-      // set images to gray
-      function grayscale() {
+      // set images to gray and hide captions
+      function initialize() {
         for (var i = 0; i < images.length; i++) {
           images[i].classList.add('grayscale');
         }
+
+        document.getElementById('back1').classList.add('hideCaption');
+        document.getElementById('back2').classList.add('hideCaption');
+        document.getElementById('back3').classList.add('hideCaption');
+        document.getElementById('back4').classList.add('hideCaption');
+        document.getElementById('back5').classList.add('hideCaption');
+        document.getElementById('back6').classList.add('hideCaption');
+        document.getElementById('back7').classList.add('hideCaption');
+        document.getElementById('back8').classList.add('hideCaption');
+        document.getElementById('back9').classList.add('hideCaption');
+        document.getElementById('back10').classList.add('hideCaption');
       }
 
       // toggle grayscale
@@ -359,7 +513,23 @@
       }
 
 
-      window.addEventListener('load', grayscale());
+      window.addEventListener('load', initialize);
+
+      // caption
+      $('img').each(function(index, value) {
+        // when image is clicked
+        $(this).on('click', function() {
+          // get variable name of target element
+          var i = index + 1;
+          var name = '#back' + i;
+          $(name).slideDown('slow');  //display
+
+          // hide
+          $(name).on('click', function() {
+              $(this).slideUp('slow');
+          });
+        });
+      }); 
 
       // mouseover
       for (var i = 0; i < images.length; i++) {
