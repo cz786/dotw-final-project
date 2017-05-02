@@ -16,10 +16,8 @@ body {
   z-index: -100;
 }
 
-
 #animation {
   float: right;
-  /*width: 10%;*/
   width: 10vw;
   height: 100vh;
   position: absolute;
@@ -33,20 +31,16 @@ body {
   width: 75%;
 }
 
-
-
 #images {
-  /*display: block;*/
   width: 90vw;
   height: 100vh;
-  /*width: 90%;
-  height: 100%;*/
   background-color: transparent;
   perspective: 450px;
   perspective-origin: 50% 35%;
 }
 
 
+/* IMAGES */
 div#one {
   position: absolute;
   top: 30px;
@@ -56,10 +50,7 @@ div#one {
   height: 218px;
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
-  /*transform: translateZ(100px);*/
-  /*transform: rotate3d(-1, 1, 0, 45deg);*/
   transform: rotateY(17deg) translateZ(-50px) translateX(-50px);
-  /*background-color: purple;*/
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -73,7 +64,6 @@ div#two {
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
   transform: rotateY(-10deg) translateZ(-200px);
-  background-color: red;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -87,7 +77,6 @@ div#three {
   opacity: 0.8;
   transform: rotateY(10deg);
   transition: opacity 1s, z-index 0.5s;
-  background-color: yellow;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -101,7 +90,6 @@ div#four {
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
   transform: rotateY(25deg);
-  background-color: blue;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -115,7 +103,6 @@ div#five {
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
   transform: rotateY(10deg) translateZ(-50px);
-  background-color: green;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -128,8 +115,6 @@ div#six {
   height: 240px;
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
-  /*transform: rotateY(0deg);*/
-  background-color: gray;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -143,7 +128,6 @@ div#seven {
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
   transform: rotateY(-20deg) translateZ(-300px) translateX(130px);
-  background-color: magenta;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -157,7 +141,6 @@ div#eight {
   opacity: 0.8;
   transition: opacity 1s, z-index 0.5s;
   transform: rotateY(-15deg) translateZ(-150px) translateX(80px);
-  background-color: black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -175,8 +158,6 @@ div#eight {
   height: 100%;
   width: auto;
 }
-
-
 
 
 /* ANIMATION: Pacman */
@@ -230,7 +211,7 @@ div#eight {
   opacity: 1;
 }   
 
-/* Animation*/
+/* Animation */
 @keyframes rotateTop {
   0%  {transform: rotate(-90deg);}
   50% {transform: rotate(-35deg);}
@@ -266,8 +247,6 @@ div#eight {
 } 
 
 
-
-
 /* TOGGLE CLASSES */
 .grayscale {
   filter: grayscale(1);
@@ -276,7 +255,6 @@ div#eight {
 .hideCaption {
   display: none;
 }
-
 
 
 /* CAPTION */
