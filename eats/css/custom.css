@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Homemade+Apple|Waiting+for+the+Sunrise');
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+}
+
+
+#animation {
+  float: right;
+  /*width: 10%;*/
+  width: 10vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: transparent;
+}
+
+#animation > img {
+  width: 75%;
+}
+
+
+
+#images {
+  /*display: block;*/
+  width: 90vw;
+  height: 100vh;
+  /*width: 90%;
+  height: 100%;*/
+  background-color: transparent;
+  perspective: 450px;
+  perspective-origin: 50% 35%;
+}
+
+
+div#one {
+  position: absolute;
+  top: 30px;
+  left: 145px;
+  z-index: 500;
+  width: 175px;
+  height: 218px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  /*transform: translateZ(100px);*/
+  /*transform: rotate3d(-1, 1, 0, 45deg);*/
+  transform: rotateY(17deg) translateZ(-50px) translateX(-50px);
+  /*background-color: purple;*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#two {
+  position: absolute;
+  top: 50px;
+  left: 700px;
+  z-index: 400;
+  width: 500px;
+  height: 300px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(-10deg) translateZ(-200px);
+  background-color: red;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#three {
+  position: absolute;
+  top: 125px;
+  left: 265px;
+  z-index: 400;
+  width: 295px;
+  height: 222px;
+  opacity: 0.8;
+  transform: rotateY(10deg);
+  transition: opacity 1s, z-index 0.5s;
+  background-color: yellow;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#four {        
+  position: absolute;
+  top: 290px;
+  left: 85px;
+  z-index: 100;
+  width: 210px;
+  height: 210px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(25deg);
+  background-color: blue;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#five {
+  position: absolute;
+  top: 440px;
+  left: 225px;
+  z-index: 700;
+  width: 210px;
+  height: 300px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(10deg) translateZ(-50px);
+  background-color: green;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#six {
+  position: absolute;
+  top: 250px;
+  left: 525px;
+  z-index: 600;
+  width: 300px;
+  height: 240px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  /*transform: rotateY(0deg);*/
+  background-color: gray;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#seven {
+  position: absolute;
+  top: 250px;
+  left: 1060px;
+  z-index: 200;
+  width: 230px;
+  height: 300px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(-20deg) translateZ(-300px) translateX(130px);
+  background-color: magenta;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div#eight {
+  position: absolute;
+  top: 450px;
+  left: 910px;
+  z-index: 300;
+  width: 240px;
+  height: 240px;
+  opacity: 0.8;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(-15deg) translateZ(-150px) translateX(80px);
+  background-color: black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#images img {
+  width: 100%;
+  height: auto;
+}
+
+#images div:hover {
+  opacity: 1;
+  z-index: 1000;
+}
+
+#five img, #seven img, #six img {
+  height: 100%;
+  width: auto;
+}
+
+
+
+
+/* ANIMATION: Pacman */
+#animation{
+  float: right;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 10vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+#pacman-top{
+  background-color:yellow;
+  position: absolute;
+  top: 30px;
+  left: 32px;
+  height:25px;
+  width:50px;
+  border-radius:100px 100px 0 0;
+  transform: rotate(-90deg);
+  animation: rotateTop 0.5s infinite linear;
+  opacity: 1;
+}
+
+#pacman-bottom{
+  position: absolute;
+  top: 30px;
+  left: 54px;
+  float: right;
+  background-color:yellow;
+  height:25px;
+  width:50px;
+  border-radius:0 0 100px 100px;
+  transform: rotate(-90deg);
+  animation: rotateBottom 0.5s infinite linear;
+  opacity: 1;
+}
+
+#eat {
+  position: absolute;
+  top: 100px;
+  margin-top: -54px;
+  margin-left: -2px;
+  width: 13px;
+  height: 13px;
+  border-radius: 20%;
+  animation: eat 1s linear 0s infinite;
+  opacity: 1;
+}   
+
+/* Animation*/
+@keyframes rotateTop {
+  0%  {transform: rotate(-90deg);}
+  50% {transform: rotate(-35deg);}
+  
+}
+@keyframes rotateBottom {
+  0%  {transform: rotate(-90deg);}
+  50% {transform: rotate(-145deg);}  
+}
+
+@keyframes eat {
+  0% { 
+    box-shadow: 
+      65px 100px 0 0 #ffcc00, 
+      65px 300px 0 0 #ffcc00, 
+      65px 500px 0 0 #ffcc00, 
+      65px 700px 0 0 #ffcc00,
+      65px 900px 0 0 #ffcc00, 
+      65px 1100px 0 0 #ffcc00, 
+      65px 1300px 0 0 #ffcc00;
+  }
+  
+  100% { 
+    box-shadow: 
+      65px 0px 0 0 #ffcc00, 
+      65px 100px 0 0 #ffcc00,
+      65px 300px 0 0 #ffcc00, 
+      65px 500px 0 0 #ffcc00, 
+      65px 700px 0 0 #ffcc00, 
+      65px 900px 0 0 #ffcc00, 
+      65px 1100px 0 0 #ffcc00;
+  }
+} 
+
+
+
+
+/* TOGGLE CLASSES */
+.grayscale {
+  filter: grayscale(1);
+}
+
+.hideCaption {
+  display: none;
+}
+
+
+
+/* CAPTION */
+p {
+  margin-top: 63px;
+  font-family: 'Waiting for the Sunrise', cursive, Helvetica, sans-serif;
+  font-size: 3em;
+  color: white;
+  text-align: center;
+}
+
+#back1 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 600;
+  width: 185px;
+  height: 220px;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(17deg) translateZ(80px) translateX(-30px);
+  background-color: rgba(255, 163, 102, 0.6);
+  
+}
+
+#back2 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 500;
+  width: 510px;
+  height: 316px;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(-10deg) translateZ(30px);
+  background-color: rgba(255, 163, 102, 0.6);
+}
+
+#back3 {
+  position: absolute;
+  top: 0px;
+  left: -11px;
+  z-index: 400;
+  width: 300px;
+  height: 232px;
+  transform: rotateY(10deg) translateZ(50px);
+  transition: opacity 1s, z-index 0.5s;
+  background-color: rgba(255, 163, 102, 0.6);
+}
+
+#back4 {        
+  position: absolute;
+  top: 0px;
+  left: -12px;
+  z-index: 100;
+  width: 233px;
+  height: 210px;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(25deg);
+  background-color: rgba(255, 163, 102, 0.6);
+}
+
+#back5 {
+  position: absolute;
+  top: 0px;
+  left: 6px;
+  z-index: 700;
+  width: 245px;
+  height: 300px;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(10deg) translateZ(-50px);
+  background-color: rgba(255, 163, 102, 0.6);
+}
+
+#back6 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 600;
+  width: 361px;
+  height: 240px;
+  transition: opacity 1s, z-index 0.5s;
+  background-color: rgba(255, 163, 102, 0.6);
+}
+
+#back7 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 200;
+  width: 270px;
+  height: 300px;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(-20deg) translateZ(20px);
+  background-color: rgba(255, 163, 102, 0.6);
+}
+
+#back8 {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 300;
+  width: 250px;
+  height: 240px;
+  transition: opacity 1s, z-index 0.5s;
+  transform: rotateY(-15deg) translateZ(20px);
+  background-color: rgba(255, 163, 102, 0.6);
+}
