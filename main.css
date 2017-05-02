@@ -31,8 +31,9 @@ body {
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 10px;
-  position: fixed;
+  /*bottom: 10px;*/
+  top: 0px;
+  position: absolute;
   width: 100%;
   height: 150px;
 }
@@ -41,7 +42,7 @@ body {
 #bird {
   position: absolute;
   left: 950px;
-  top: -305px;
+  top: 271px;
 }
 
 #head {
