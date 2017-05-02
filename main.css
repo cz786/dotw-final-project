@@ -22,8 +22,7 @@ h2 {
   text-align: center;
 }
 
-.polaroids {
-  /*margin: 0 auto;*/
+.navigation {
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -36,33 +35,25 @@ h2 {
 }
 
 .polaroid {
-  /*display: inline-block;*/
-  margin: 50px;
   position: absolute;
-  /*width: auto;*/
+  margin: 50px;
 }
 
 div#eats {
-  /*position: absolute;*/
   top: 200px;
   left: 140px;
-  
   transform: rotateX(7deg) rotateY(-7deg) translateZ(-20px);
 }
 
 div#places {
-  /*position: absolute;*/
   top: 200px;
   left: 440px;
-  
   transform: rotateX(7deg) rotateY(0deg) translateZ(10px) translateX(130px);
 }
 
 div#people {
-  /*position: absolute;*/
   top: 200px;
-  left: 740px;
-  
+  left: 740px; 
   transform: rotateX(7deg) rotateY(7deg) translateZ(9px) translateX(240px);
 }
 
@@ -70,11 +61,8 @@ div#people {
   border: 12px solid #fff;
   border-bottom: 70px solid #fff;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   width: 200px;
   height: 200px;
-  /*height: auto;
-  max-width: 100%;*/
 }
 
 .polaroid p {
